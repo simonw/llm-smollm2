@@ -5,7 +5,7 @@
 [![Tests](https://github.com/simonw/llm-smollm2/actions/workflows/test.yml/badge.svg)](https://github.com/simonw/llm-smollm2/actions/workflows/test.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/llm-smollm2/blob/main/LICENSE)
 
-SmolLM2-135M-Instruct.Q4_1 for LLM
+SmolLM2-135M-Instruct.Q4_1 for LLM. [Background on this project](https://simonwillison.net/2025/Feb/7/pip-install-llm-smollm2/).
 
 ## Installation
 
