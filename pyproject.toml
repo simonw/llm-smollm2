@@ -1,0 +1,34 @@
+[project]
+name = "llm-smollm2"
+version = "0.1"
+description = "SmolLM2-135M-Instruct.Q4_1 for LLM"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "llm",
+    "llama-cpp-python>=0.3.7",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/simonw/llm-smollm2"
+Changelog = "https://github.com/simonw/llm-smollm2/releases"
+Issues = "https://github.com/simonw/llm-smollm2/issues"
+CI = "https://github.com/simonw/llm-smollm2/actions"
+
+[project.entry-points.llm]
+smollm2 = "llm_smollm2"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.package-data]
+llm_smollm2 = ["SmolLM2-135M-Instruct.Q4_1.gguf"]
