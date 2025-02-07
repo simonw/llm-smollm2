@@ -61,7 +61,7 @@ class SmolLM2(llm.Model):
 
         if not stream:
             completion = model.create_chat_completion(messages=messages)
-            yield completion["choices"][0]["text"]
+            yield completion["choices"][0]["message"]["content"]
         else:
             completion = model.create_chat_completion(messages=messages, stream=True)
             for chunk in completion:
