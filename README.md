@@ -17,6 +17,15 @@ llm install llm-smollm2
 
 This plugin bundles a full copy of the [SmolLM2-135M-Instruct.Q4_1](https://huggingface.co/QuantFactory/SmolLM2-135M-Instruct-GGUF/blob/ab810cf68114990406fdf996510dd3d3c6adbdf5/SmolLM2-135M-Instruct.Q4_1.gguf) quantized version of the [SmolLM2-135M-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct) model by [HuggingFaceTB](https://huggingface.co/HuggingFaceTB).
 
+Once installed, run the model like this:
+```bash
+llm -m SmolLM2 'Are dogs real?'
+```
+Or to chat with the model (keeping it resident in memory):
+```bash
+llm chat -m SmolLM2
+```
+
 ## Development
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
