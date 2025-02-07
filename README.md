@@ -13,6 +13,10 @@ Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
 ```bash
 llm install llm-smollm2
 ```
+If you have [uv](https://github.com/astral-sh/uv) installed you can run the model without any installation step like this:
+```bash
+uvx --with llm-smollm2 llm -m SmolLM2 'Are dogs real?'
+```
 ## Usage
 
 This plugin bundles a full copy of the [SmolLM2-135M-Instruct.Q4_1](https://huggingface.co/QuantFactory/SmolLM2-135M-Instruct-GGUF/blob/ab810cf68114990406fdf996510dd3d3c6adbdf5/SmolLM2-135M-Instruct.Q4_1.gguf) quantized version of the [SmolLM2-135M-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct) model by [HuggingFaceTB](https://huggingface.co/HuggingFaceTB).
