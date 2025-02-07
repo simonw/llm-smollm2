@@ -13,9 +13,9 @@ Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
 ```bash
 llm install llm-smollm2
 ```
-If you have [uv](https://github.com/astral-sh/uv) installed you can run the model without any installation step like this:
+If you have [uv](https://github.com/astral-sh/uv) installed you can chat with the model without any installation step like this:
 ```bash
-uvx --with llm-smollm2 llm -m SmolLM2 'Are dogs real?'
+uvx --with llm-smollm2 llm chat -m SmolLM2
 ```
 ## Usage
 
