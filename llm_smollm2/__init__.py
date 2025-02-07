@@ -15,10 +15,10 @@ gguf_path = str(
 
 @llm.hookimpl
 def register_models(register):
-    register(GgufChatModel("SmolLM2", gguf_path))
+    register(SmolLM2("SmolLM2", gguf_path))
 
 
-class GgufChatModel(llm.Model):
+class SmolLM2(llm.Model):
     can_stream = True
 
     def __init__(
