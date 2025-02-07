@@ -8,17 +8,6 @@ import os
 
 llama_logger.logger.setLevel(logging.CRITICAL)
 
-
-@contextmanager
-def suppress_output():
-    """
-    Suppresses all stdout and stderr output within the context.
-    """
-    with open(os.devnull, "w") as devnull:
-        with redirect_stdout(devnull), redirect_stderr(devnull):
-            yield
-
-
 gguf_path = str(
     importlib.resources.files("llm_smollm2").joinpath("SmolLM2-135M-Instruct.Q4_1.gguf")
 )
@@ -80,3 +69,13 @@ class GgufChatModel(llm.Model):
                 delta_content = choice.get("delta", {}).get("content")
                 if delta_content is not None:
                     yield delta_content
+
+
+@contextmanager
+def suppress_output():
+    """
+    Suppresses all stdout and stderr output within the context.
+    """
+    with open(os.devnull, "w") as devnull:
+        with redirect_stdout(devnull), redirect_stderr(devnull):
+            yield
